@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # This scripts sets the container up the container with the desiered service(s) properly running.
 #
