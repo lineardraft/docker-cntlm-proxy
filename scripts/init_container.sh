@@ -42,22 +42,22 @@ fi
 
 : '
 # Build and install cntlm
-FLAG_GCC_INSTALLED=$(which gcc)
-FLAG_MAKE_INSTALLED=$(which make)
-if [[ -z FLAG_GCC_INSTALLED || -z FLAG_MAKE_INSTALLED ]]
-then
-    echo "Cannot find both make and gcc installed."
-    exit 1
-fi
+#FLAG_GCC_INSTALLED=$(which gcc)
+#FLAG_MAKE_INSTALLED=$(which make)
+#if [[ -z FLAG_GCC_INSTALLED || -z FLAG_MAKE_INSTALLED ]]
+#then
+#    echo "Cannot find both make and gcc installed."
+#    exit 1
+#fi
 
-if [ -d /usr/local/src/cntlm-0.92.3/ ]
-then
-    echo "Running configure, make and make install."
-    cd /usr/local/src/cntlm-0.92.3/
-    ./configure  > /dev/null 2>&1
-    make > /dev/null 2>&1
-    make install > /dev/null 2>&1
-fi
-'
+#if [ -d /usr/local/src/cntlm-0.92.3/ ]
+#then
+#    echo "Running configure, make and make install."
+#    cd /usr/local/src/cntlm-0.92.3/
+#    ./configure  > /dev/null 2>&1
+#    make > /dev/null 2>&1
+#    make install > /dev/null 2>&1
+#fi
+#'
 # Start cNTLM in foreground
 cntlm -f -g -c /etc/cntlm.conf
